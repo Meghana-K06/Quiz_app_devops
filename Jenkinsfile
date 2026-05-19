@@ -1,19 +1,23 @@
 pipeline {
-    agent any
+agent any
 
-        stage('Build Docker Image') {
-            steps {
-                sh 'docker build -t quiz-app .'
-            }
-        }
+```
+stages {
 
-        stage('Run Container') {
-            steps {
-                sh '''
-                docker rm -f quiz-container || true
-                docker run -d --name quiz-container -p 8081:80 quiz-app
-                '''
-            }
+    stage('Build Docker Image') {
+        steps {
+            sh 'docker build -t quizapp .'
         }
     }
+
+    stage('Run Container') {
+        steps {
+            sh 'docker rm -f quizapp-container || true'
+            sh 'docker run -d -p 8081:80 --name quizapp-container quizapp'
+        }
+    }
+
+}
+```
+
 }
