@@ -1,13 +1,6 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/Meghana-K06/quiz-app-devops.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t quiz-app .'
