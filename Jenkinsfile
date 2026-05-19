@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Meghana-K06/Quiz_app_devops.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t quiz-app:latest .'
