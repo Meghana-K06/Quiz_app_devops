@@ -1,9 +1,6 @@
 # Quiz App DevOps CI/CD Pipeline
 
-This project demonstrates a basic CI/CD pipeline using :contentReference[oaicite:0]{index=0} and :contentReference[oaicite:1]{index=1} for automated deployment of a web application.
-
-The main objective of this project was to understand how modern DevOps workflows automate building and deployment whenever code changes are pushed to :contentReference[oaicite:2]{index=2}.
-
+This project demonstrates a basic CI/CD pipeline using GitHub Actions and AWS for automated deployment of a web application.The main objective of this project was to understand how modern DevOps workflows automate building and deployment whenever code changes are pushed to GitHub.
 ---
 
 # Technologies Used
